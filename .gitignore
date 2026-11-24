@@ -1,0 +1,26 @@
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Local AI development instructions
+AGENTS.md

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Nathan Brunet, étudiant ingénieur et développeur full-stack et mobile.">
+  <meta name="theme-color" content="#07111f">
+  <title>Nathan Brunet | Développeur full-stack & mobile</title>
+  <script>
+    try {
+      document.documentElement.dataset.theme =
+        localStorage.getItem("portfolio-theme") ||
+        (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    } catch {
+      document.documentElement.dataset.theme =
+        window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navigation principale">
+      <a class="brand" href="#home" aria-label="Retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">NB</span>
+        <span>Nathan Brunet</span>
+      </a>
+
+      <div class="nav-panel" id="nav-panel">
+        <ul class="nav-links">
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">Me</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Activer le mode clair" title="Changer de thème">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> En fin d'études d'ingénieur</p>
+          <h1 id="hero-title">Nathan <span>Brunet.</span></h1>
+          <p class="hero-role">Étudiant ingénieur & développeur <strong>full-stack / mobile</strong></p>
+          <p class="hero-text">Je conçois et développe des applications web, mobiles et backend, avec une attention particulière portée à l'utilité, à la clarté et à la qualité technique.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Voir mes projets
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </a>
+            <a class="button button-secondary" href="#contact">Me contacter</a>
+            <a class="text-link" href="assets/Nathan_Brunet_CV.pdf" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"></path></svg>
+              Télécharger mon CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Aperçu de mon profil technique">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>nathan.profile.js</span>
+            </div>
+            <pre aria-label="Extrait de profil développeur"><code><span class="code-purple">const</span> developer = {
+  name: <span class="code-green">"Nathan Brunet"</span>,
+  focus: [
+    <span class="code-green">"Mobile"</span>,
+    <span class="code-green">"Backend"</span>,
+    <span class="code-green">"Web"</span>
+  ],
+  mindset: <span class="code-green">"build & learn"</span>,
+  available: <span class="code-orange">true</span>
+};</code></pre>
+            <div class="code-card-footer">
+              <span><span class="status-dot"></span> Open to opportunities</span>
+              <span>FR</span>
+            </div>
+          </div>
+          <div class="floating-chip chip-java">Java</div>
+          <div class="floating-chip chip-api">API</div>
+          <div class="floating-chip chip-mobile">Mobile</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Découvrir la suite">
+        <span>Scroll to explore</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </a>
+    </section>
+
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 / À propos</p>
+          <h2 id="about-title">Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame">
+              <img id="profile-image" src="assets/images/profile.jpg" alt="Portrait de Nathan Brunet">
+              <div class="portrait-placeholder" aria-hidden="true">
+                <span>NB</span>
+                <small>Ajoutez votre photo dans<br>assets/images/profile.jpg</small>
+              </div>
+            </div>
+            <div class="portrait-label">
+              <span>Based in France</span>
+              <span class="pulse"></span>
+            </div>
+          </div>
+          <div class="about-content reveal">
+            <p class="lead">Je suis en fin d'études d'ingénieur et je construis des applications qui répondent à des besoins concrets.</p>
+            <p>Je m'intéresse au développement web, mobile et backend, ainsi qu'aux API, aux systèmes temps réel et aux outils utiles au quotidien. J'aime partir d'un besoin, structurer une solution compréhensible et aller jusqu'à une version fonctionnelle.</p>
+            <p>Ce portfolio rassemble mes projets, les choix techniques qui les composent et mon évolution comme développeur. Je cherche avant tout à progresser sur des bases solides, à écrire du code maintenable et à mieux comprendre les systèmes que je construis.</p>
+            <div class="focus-list" aria-label="Domaines de prédilection">
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>Mobile</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg>Backend</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M7 6.5h.01M10 6.5h.01"></path></svg>Web</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="section-kicker">02 / Stack</p>
+            <h2 id="skills-title">Compétences</h2>
+          </div>
+          <p>Un socle orienté produit, de l'interface jusqu'aux données.</p>
+        </div>
+        <div class="skills-grid reveal" aria-label="Technologies et outils">
+          <article class="skill-card"><span class="skill-icon">An</span><strong>Android</strong></article>
+          <article class="skill-card"><span class="skill-icon">Jv</span><strong>Java</strong></article>
+          <article class="skill-card"><span class="skill-icon">Sq</span><strong>SQLite</strong></article>
+          <article class="skill-card"><span class="skill-icon">Fb</span><strong>Firebase</strong></article>
+          <article class="skill-card"><span class="skill-icon">Sp</span><strong>Spring Boot</strong></article>
+          <article class="skill-card"><span class="skill-icon">Lv</span><strong>Laravel</strong></article>
+          <article class="skill-card"><span class="skill-icon">API</span><strong>API REST</strong></article>
+          <article class="skill-card"><span class="skill-icon">WS</span><strong>WebSocket</strong></article>
+          <article class="skill-card"><span class="skill-icon">PHP</span><strong>PHP</strong></article>
+          <article class="skill-card"><span class="skill-icon">&lt;/&gt;</span><strong>HTML</strong></article>
+          <article class="skill-card"><span class="skill-icon">#</span><strong>CSS</strong></article>
+          <article class="skill-card"><span class="skill-icon">JS</span><strong>JavaScript</strong></article>
+          <article class="skill-card"><span class="skill-icon">Re</span><strong>React</strong></article>
+          <article class="skill-card"><span class="skill-icon">TS</span><strong>TypeScript</strong></article>
+          <article class="skill-card"><span class="skill-icon">Fs</span><strong>Firestore</strong></article>
+          <article class="skill-card"><span class="skill-icon">SQL</span><strong>SQL</strong></article>
+          <article class="skill-card"><span class="skill-icon">NQ</span><strong>NoSQL</strong></article>
+          <article class="skill-card"><span class="skill-icon">Git</span><strong>Git</strong></article>
+          <article class="skill-card"><span class="skill-icon">AS</span><strong>Android Studio</strong></article>
+          <article class="skill-card"><span class="skill-icon">IJ</span><strong>IntelliJ</strong></article>
+          <article class="skill-card"><span class="skill-icon">VS</span><strong>VS Code</strong></article>
+          <article class="skill-card"><span class="skill-icon">PT</span><strong>Postman / Thunder</strong></article>
+          <article class="skill-card"><span class="skill-icon">Go</span><strong>Godot</strong></article>
+          <article class="skill-card"><span class="skill-icon">Doc</span><strong>Documentation</strong></article>
+          <article class="skill-card"><span class="skill-icon">Arc</span><strong>Architecture</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section" id="experience" aria-labelledby="experience-title">
+      <div class="container narrow-container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">03 / Parcours</p>
+          <h2 id="experience-title">Expériences & études</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><span></span></div>
+            <div class="timeline-meta"><time>En cours</time><span>Études</span></div>
+            <div class="timeline-card">
+              <h3>Fin d'études d'ingénieur</h3>
+              <p>Formation d'ingénieur avec une orientation développement logiciel, projets techniques, architecture applicative et réalisation de projets concrets.</p>
+              <div class="tag-list"><span>Ingénierie</span><span>Développement</span><span>Architecture</span><span>Projets</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><span></span></div>
+            <div class="timeline-meta"><time>Expérience</time><span>Stage</span></div>
+            <div class="timeline-card">
+              <h3>Stage développement</h3>
+              <p>Développement de fonctionnalités concrètes : messagerie IMAP/SMTP, génération de certificats PDF/PNG, envoi de mails, transfert SFTP et intégration de QR codes.</p>
+              <div class="tag-list"><span>Développement</span><span>Automatisation</span><span>Fichiers</span><span>Mail</span><span>Intégration</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><span></span></div>
+            <div class="timeline-meta"><time>Découverte</time><span>Stage</span></div>
+            <div class="timeline-card">
+              <h3>Stage service technique en clinique</h3>
+              <p>Découverte d'un environnement technique et compréhension du fonctionnement d'un service support et maintenance, avec les contraintes d'un cadre professionnel exigeant.</p>
+              <div class="tag-list"><span>Rigueur</span><span>Adaptation</span><span>Support</span><span>Environnement professionnel</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><span></span></div>
+            <div class="timeline-meta"><time>Continu</time><span>Projets</span></div>
+            <div class="timeline-card">
+              <h3>Projets académiques et personnels</h3>
+              <p>Réalisation de projets en développement mobile, backend, temps réel et jeu vidéo, avec la volonté de construire des solutions fonctionnelles et compréhensibles.</p>
+              <div class="tag-list"><span>Android</span><span>Backend</span><span>WebSocket</span><span>Godot</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading projects-heading reveal">
+          <div>
+            <p class="section-kicker">04 / Sélection</p>
+            <h2 id="projects-title">Projets</h2>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-button prev-button" type="button" aria-label="Projet précédent">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button class="carousel-button next-button" type="button" aria-label="Projet suivant">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel reveal" aria-roledescription="carrousel" aria-label="Projets de Nathan">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <article class="project-card" aria-roledescription="slide">
+                <div class="project-media">
+                  <img src="assets/images/projects/student-housing.png" alt="Aperçu conceptuel de l'application de logements étudiants">
+                  <span class="project-number">01</span>
+                  <span class="project-status">Terminé</span>
+                </div>
+                <div class="project-content">
+                  <p class="project-type">Mobile · Android</p>
+                  <h3>Logements étudiants</h3>
+                  <p>Application mobile pour consulter, ajouter et gérer des logements, avec cartographie, itinéraires, favoris et avis.</p>
+                  <ul class="project-points">
+                    <li>Authentification et données Firebase</li>
+                    <li>OpenStreetMap, géolocalisation et OSRM</li>
+                    <li>Favoris locaux avec SQLite</li>
+                  </ul>
+                  <div class="tag-list"><span>Java</span><span>Android</span><span>Firestore</span><span>SQLite</span><span>osmdroid</span></div>
+                  <div class="project-links"><a href="#" aria-label="Voir le code GitHub du projet logements">GitHub</a><a href="#" aria-label="Voir les détails du projet logements">Détails <span>↗</span></a></div>
+                </div>
+              </article>
+
+              <article class="project-card" aria-roledescription="slide">
+                <div class="project-media">
+                  <img src="assets/images/projects/realtime-quiz.png" alt="Illustration d'un quiz multijoueur en temps réel">
+                  <span class="project-number">02</span>
+                  <span class="project-status">Académique</span>
+                </div>
+                <div class="project-content">
+                  <p class="project-type">Backend · Temps réel</p>
+                  <h3>Quiz WebSocket</h3>
+                  <p>Quiz multijoueur avec communication en temps réel entre un serveur Spring Boot et des clients web et Android.</p>
+                  <ul class="project-points">
+                    <li>Serveur Spring Boot WebSocket</li>
+                    <li>Protocole d'échange JSON</li>
+                    <li>Questions, réponses et résultats en direct</li>
+                  </ul>
+                  <div class="tag-list"><span>Java</span><span>Spring Boot</span><span>WebSocket</span><span>JSON</span></div>
+                  <div class="project-links"><a href="#" aria-label="Voir le code GitHub du quiz">GitHub</a><a href="#" aria-label="Voir les détails du quiz">Détails <span>↗</span></a></div>
+                </div>
+              </article>
+
+              <article class="project-card" aria-roledescription="slide">
+                <div class="project-media">
+                  <img src="assets/images/projects/toeic-trainer.png" alt="Aperçu conceptuel de l'application TOEIC Trainer">
+                  <span class="project-number">03</span>
+                  <span class="project-status status-progress">En cours</span>
+                </div>
+                <div class="project-content">
+                  <p class="project-type">Mobile · Éducation</p>
+                  <h3>TOEIC Trainer</h3>
+                  <p>Application Android d'entraînement au TOEIC conçue pour travailler le vocabulaire avec une interface claire.</p>
+                  <ul class="project-points">
+                    <li>Exercices de vocabulaire</li>
+                    <li>Sources de données CSV et JSON</li>
+                    <li>Affichage adapté aux textes longs</li>
+                  </ul>
+                  <div class="tag-list"><span>Java</span><span>Android</span><span>JSON</span><span>CSV</span></div>
+                  <div class="project-links"><a href="#" aria-label="Voir le code GitHub de TOEIC Trainer">GitHub</a><a href="#" aria-label="Voir les détails de TOEIC Trainer">Détails <span>↗</span></a></div>
+                </div>
+              </article>
+
+              <article class="project-card" aria-roledescription="slide">
+                <div class="project-media">
+                  <img src="assets/images/projects/test-management.png" alt="Illustration d'un backend de gestion de tests automatisés">
+                  <span class="project-number">04</span>
+                  <span class="project-status status-progress">Prototype</span>
+                </div>
+                <div class="project-content">
+                  <p class="project-type">Backend · Automatisation</p>
+                  <h3>Gestion de tests automatisés</h3>
+                  <p>Backend de gestion des tests, étapes, exécutions et résultats, préparé pour une intégration avec Raspberry Pi.</p>
+                  <ul class="project-points">
+                    <li>API, utilisateurs et rôles</li>
+                    <li>Historique des runs et résultats</li>
+                    <li>Architecture prête pour Raspberry Pi</li>
+                  </ul>
+                  <div class="tag-list"><span>Laravel</span><span>PHP</span><span>API REST</span><span>SQL</span></div>
+                  <div class="project-links"><a href="#" aria-label="Voir le code GitHub du backend de tests">GitHub</a><a href="#" aria-label="Voir les détails du backend de tests">Détails <span>↗</span></a></div>
+                </div>
+              </article>
+
+              <article class="project-card" aria-roledescription="slide">
+                <div class="project-media">
+                  <img src="assets/images/projects/pixel-rpg.png" alt="Village en pixel art pour un jeu d'exploration RPG">
+                  <span class="project-number">05</span>
+                  <span class="project-status status-progress">WIP</span>
+                </div>
+                <div class="project-content">
+                  <p class="project-type">Jeu vidéo · Personnel</p>
+                  <h3>RPG pixel art</h3>
+                  <p>Jeu personnel d'exploration en pixel art autour d'un village, de la progression, du craft et du combat.</p>
+                  <ul class="project-points">
+                    <li>Village, maisons et level design</li>
+                    <li>Exploration et monstres</li>
+                    <li>Craft et système d'équipements</li>
+                  </ul>
+                  <div class="tag-list"><span>Godot</span><span>Pixel Art</span><span>Game Design</span></div>
+                  <div class="project-links"><a href="#" aria-label="Voir le code GitHub du RPG">GitHub</a><a href="#" aria-label="Voir les détails du RPG">Détails <span>↗</span></a></div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="carousel-footer">
+            <div class="carousel-indicators" aria-label="Choisir un projet"></div>
+            <p><span class="current-slide">01</span> / <span>05</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">05 / Échangeons</p>
+            <h2 id="contact-title">Contact me<span>.</span></h2>
+            <p>Disponible pour échanger autour d'un projet, d'une opportunité ou simplement discuter développement.</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-card" href="mailto:nathan.brunet@example.com">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+              <span><small>Email</small><strong>Me contacter</strong></span><span class="arrow">↗</span>
+            </a>
+            <a class="contact-card" href="#" target="_blank" rel="noreferrer">
+              <span class="contact-icon">in</span><span><small>LinkedIn</small><strong>Nathan Brunet</strong></span><span class="arrow">↗</span>
+            </a>
+            <a class="contact-card" href="#" target="_blank" rel="noreferrer">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.3 3.5 6.5 6.8 6.9a4.8 4.8 0 0 0-1 3.4v4"></path></svg></span>
+              <span><small>GitHub</small><strong>Voir mes dépôts</strong></span><span class="arrow">↗</span>
+            </a>
+            <a class="contact-card" href="assets/Nathan_Brunet_CV.pdf" download>
+              <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6M12 18v-6m0 6-3-3m3 3 3-3"></path></svg></span>
+              <span><small>Curriculum vitae</small><strong>Télécharger le CV</strong></span><span class="arrow">↓</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">NB</span><span>Nathan Brunet</span></a>
+        <p>© 2026 Nathan Brunet. Built with HTML, CSS & JavaScript.</p>
+      </div>
+      <nav aria-label="Navigation de pied de page">
+        <a href="#about">Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="back-to-top" href="#home" aria-label="Retour en haut">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
